@@ -47,10 +47,13 @@
 
   puts "Player 1's Hand"
   print @player1
+  puts ""
   puts "Player 2's Hand"
   print @player2
+  puts ""
   puts "Player 3's Hand"
   print @player3
+  puts ""
   puts "Player 4's Hand"
   print @player4
 
