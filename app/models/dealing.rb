@@ -1,3 +1,4 @@
+require 'pry'
 FULL_BAG = %w(e e e e e e e e e e e e a a a a a a a a a i i i i i i i i i o o o o o o o o n n n n n n r r r r r r t t t t t t l l l l s s s s u u u u d d d d g g g b b c c m m p p f f h h v v w w y y k q z j x - -)
 
 @bag = []
@@ -50,20 +51,20 @@ else
 end
 
 puts "Player 1's Turn."
-puts "These are your letters."
-print @player1_hand
 
-@player_word = gets.chomp
+
 
 def valid_letters
+  puts "These are your letters. #{@player1_hand}"
+  @player_word = gets.chomp
   @player_word_split = @player_word.split(//)
-  @player_word_split.map do |x|
-    @player1_hand.map do |y|
-      if y == x
-        @player1_hand.delete(y)
-      else
-        puts "You need to pick a correct word"
-      end
+  @player_word_split.each do |x|
+    if @player1_hand.include?(x)
+      puts x
+    else
+      puts "Invalid entry, please try again"
+      valid_letters
+      break
     end
   end
 end
