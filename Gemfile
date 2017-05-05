@@ -53,3 +53,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'danno_scrabble', '~> 0.0.6'
 gem 'scrabble_score', '~> 0.1.2'
+gem 'text-table', '~> 1.2', '>= 1.2.4'
