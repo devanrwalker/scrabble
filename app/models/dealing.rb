@@ -60,7 +60,7 @@ def valid_letters
   @player_word_split.map do |x|
     @player1_hand.map do |y|
       if y == x
-        
+        @player1_hand.delete(y)
       else
         puts "You need to pick a correct word"
       end
@@ -69,6 +69,7 @@ def valid_letters
 end
 
 valid_letters
+print @player1_hand
 print @player_word_split
 
 
