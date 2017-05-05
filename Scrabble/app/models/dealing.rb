@@ -34,6 +34,7 @@
     @player1 = random
     @player2 = random
     @player3 = random
+
     @player4 = random
   elsif @players == 3
     @player1 = random
@@ -44,9 +45,13 @@
     @player2 = random
   end
 
+  puts "Player 1's Hand"
   print @player1
+  puts "Player 2's Hand"
   print @player2
+  puts "Player 3's Hand"
   print @player3
+  puts "Player 4's Hand"
   print @player4
 
   # puts @mynumber
